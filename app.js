@@ -75,7 +75,6 @@ var div = document.getElementById("output");
 function convert(x) {
   x = document.getElementById("input").value;
   var i = document.getElementById("unit-select1").value;
-  var o = document.getElementById("unit-select2").value;
 
   if (i == "lb" && o == "kg") {
     var c = lb_kg(x);
@@ -120,3 +119,5 @@ if (i == o) {
   number.textContent = c + " " + o + ".";
   div.appendChild(number);
 }
+
+/* add mouseover/mouseout (hover) and keyboard events*/
