@@ -64,10 +64,15 @@ function g_kg(x) {
   return fnum;
 }
 
-let convertB = document.getElementById("convert");
-convertB.addEventListener("click", () => {
-  convert();
-});
+window.addEventListener("keypress", convert_event);
+
+function convert_event(event) {
+    if (event.key === "c") {
+        convert();
+    } else {
+        //do nothing
+    }
+}
 
 var number = document.createElement("p");
 var div = document.getElementById("output");
@@ -75,15 +80,16 @@ var div = document.getElementById("output");
 function convert(x) {
   x = document.getElementById("input").value;
   var i = document.getElementById("unit-select1").value;
+    var o = "kg";
 
   if (i == "lb" && o == "kg") {
-    var c = lb_kg(x);
+     var c = lb_kg(x);
   }
   if (i == "lb" && o == "g") {
-    var c = lb_g(x);
+     var c = lb_g(x);
   }
   if (i == "lb" && o == "oz") {
-    var c = lb_oz(x);
+     var c = lb_oz(x);
   }
   if (i == "oz" && o == "kg") {
     var c = oz_kg(x);
