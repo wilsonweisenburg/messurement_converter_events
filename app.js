@@ -75,7 +75,7 @@ function convert_event(event) {
 }
 
 var number = document.createElement("p");
-var div = document.getElementById("output");
+var div = document.getElementById("output")
 
 function convert(x) {
   x = document.getElementById("input").value;
